@@ -1,6 +1,6 @@
-# 🚀 ETL Workshop — Recruitment Data Analysis
+#  ETL Workshop — Recruitment Data Analysis
 
-## 📌 Project Description
+##  Project Description
 This project implements a complete **ETL (Extract, Transform, Load) pipeline** using Python, MySQL, and Jupyter Notebook.  
 The dataset represents **50,000 job applications** with attributes such as candidate information, application date, country, seniority, technology, and evaluation scores.  
 
@@ -8,7 +8,7 @@ The main objective was to **design a Data Warehouse with a Star Schema** and gen
 
 ---
 
-## 🔄 ETL Pipeline
+##  ETL Pipeline
 
 ### 1. **Extract**
 - Source: `candidates.csv` (semicolon separated)
@@ -38,7 +38,7 @@ The main objective was to **design a Data Warehouse with a Star Schema** and gen
 
 ---
 
-## 🗂️ Data Warehouse (Star Schema)
+##  Data Warehouse (Star Schema)
 ```mermaid
 erDiagram
     FactApplication {
@@ -94,45 +94,73 @@ erDiagram
     FactApplication }o--|| DimCountry : "country_key"
     FactApplication }o--|| DimTechnology : "technology_key"
     FactApplication }o--|| DimSeniority : "seniority_key"
+```
 
+---
 
-📊 KPIs Implemented
-Hires by Technology → Top-demand skills (Game Development, DevOps).
-Hires by Year → Stable until 2021, sharp drop in 2022.
-Hires by Seniority → Balanced distribution, slightly more entry-level.
-Hires by Country → Regional differences (Brazil leading but declining).
-Global Hire Rate % → Only 13.4% of candidates hired.
-Average Scores by Technology → Consistent performance across areas.
+##  KPIs Implemented
 
+1. **Hires by Technology** → Top-demand skills (Game Development, DevOps).  
+2. **Hires by Year** → Stable until 2021, sharp drop in 2022.  
+3. **Hires by Seniority** → Balanced distribution, slightly more entry-level.  
+4. **Hires by Country** → Regional differences (Brazil leading but declining).  
+5. **Global Hire Rate %** → Only 13.4% of candidates hired.  
+6. **Average Scores by Technology** → Consistent performance across areas.
 
-📈 Visualizations
-Bar Chart → Hires by Technology
-Line Chart → Hires by Year
-Pie Chart → Hires by Seniority
-Multi-Line Chart → Hires by Country over Time
-Grouped Bar Chart → Average Scores by Technology
-🛠️ Tech Stack
-Python: pandas, matplotlib, mysql-connector-python, sqlalchemy
-Database: MySQL 8 (dbngin + Workbench)
-Notebook: Jupyter
-Schema Design: dbdiagram.io
-📌 Conclusions
-The ETL pipeline was implemented successfully.
-The Star Schema allowed efficient analytical queries.
-KPIs and visualizations revealed meaningful insights about recruitment.
-The global hire rate was very selective (~13%).
-This project provided hands-on experience in Data Engineering & Analytics.
-▶️ How to Run
-Clone this repository:
-git clone https://github.com/yourusername/etl-workshop.git
-cd etl-workshop
-Install dependencies:
-pip install -r requirements.txt
-Start MySQL server (via dbngin or local instance).
-Execute schema creation:
-mysql -u root -p < sql/ddl_star_schema.sql
-Run Jupyter Notebook:
-jupyter notebook ETL_Workshop.ipynb
-✨ Author
-👩‍💻 Daniela Marín Villacorte
-Data Engineering Student — Universidad Autónoma de Occidente
+---
+
+##  Visualizations
+- **Bar Chart** → Hires by Technology  
+- **Line Chart** → Hires by Year  
+- **Pie Chart** → Hires by Seniority  
+- **Multi-Line Chart** → Hires by Country over Time  
+- **Grouped Bar Chart** → Average Scores by Technology  
+
+---
+
+##  Tech Stack
+- **Python**: pandas, matplotlib, mysql-connector-python, sqlalchemy  
+- **Database**: MySQL 8 (dbngin + Workbench)  
+- **Notebook**: Jupyter  
+- **Schema Design**: dbdiagram.io  
+
+---
+
+##  Conclusions
+- The ETL pipeline was implemented successfully.  
+- The Star Schema allowed efficient analytical queries.  
+- KPIs and visualizations revealed meaningful insights about recruitment.  
+- The global hire rate was very selective (~13%).  
+- This project provided **hands-on experience in Data Engineering & Analytics**.  
+
+---
+
+## ▶ How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/etl-workshop.git
+   cd etl-workshop
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Start MySQL server (via dbngin or local instance).
+
+4. Execute schema creation:
+   ```bash
+   mysql -u root -p < sql/ddl_star_schema.sql
+   ```
+
+5. Run Jupyter Notebook:
+   ```bash
+   jupyter notebook ETL_Workshop.ipynb
+   ```
+
+---
+
+## ✨ Author
+👩‍💻 Daniela Marín Villacorte  
+_Data Engineering Student — Universidad Autónoma de Occidente_  
