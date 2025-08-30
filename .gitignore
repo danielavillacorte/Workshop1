@@ -1,0 +1,3 @@
+# Ignorar carpetas ocultas generadas por Jupyter y entornos virtuales
+.ipynb_checkpoints/
+.venv/
